@@ -1,5 +1,6 @@
 package nezet;
 
+import modell.Lada;
 
 public class KincskeresesGUI extends javax.swing.JFrame {
 
@@ -8,6 +9,20 @@ public class KincskeresesGUI extends javax.swing.JFrame {
         
     }
     
+    private void Aranylada(){
+        Lada arany = new Lada("arany","Én rejtem a kincset",false);
+        aranyLabel.setText(arany.getFelirat());
+    }
+    
+    private void Ezustlada(){
+        Lada ezust = new Lada("ezüst", "Nem én rejtem a kincset", true);
+        ezustLabel.setText(ezust.getFelirat());
+   }
+    
+    private void Bronzlada(){
+        Lada bronz = new Lada("bronz", "Az arany hazudik", false);
+        bronzLabel.setText(bronz.getFelirat());
+   }
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -17,17 +32,17 @@ public class KincskeresesGUI extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         UjJatek = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
-        aranyLada = new javax.swing.JButton();
-        ezustLada = new javax.swing.JButton();
-        bronzLada = new javax.swing.JButton();
+        aranyLadaBtn = new javax.swing.JButton();
+        ezustLadaBtn = new javax.swing.JButton();
+        bronzLadaBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        aranyLabel = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        ezustLabel = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        bronzLabel = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -45,31 +60,31 @@ public class KincskeresesGUI extends javax.swing.JFrame {
             }
         });
 
-        aranyLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/aranylada.jpg"))); // NOI18N
-        aranyLada.setText("jButton1");
-        aranyLada.addActionListener(new java.awt.event.ActionListener() {
+        aranyLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/aranylada.jpg"))); // NOI18N
+        aranyLadaBtn.setText("jButton1");
+        aranyLadaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aranyLadaActionPerformed(evt);
+                aranyLadaBtnActionPerformed(evt);
             }
         });
 
-        ezustLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/ezustlada.jpg"))); // NOI18N
-        ezustLada.setText("jButton1");
-        ezustLada.addActionListener(new java.awt.event.ActionListener() {
+        ezustLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/ezustlada.jpg"))); // NOI18N
+        ezustLadaBtn.setText("jButton1");
+        ezustLadaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ezustLadaActionPerformed(evt);
+                ezustLadaBtnActionPerformed(evt);
             }
         });
 
-        bronzLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/bronz.jpg"))); // NOI18N
-        bronzLada.setText("jButton1");
-        bronzLada.addActionListener(new java.awt.event.ActionListener() {
+        bronzLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/bronz.jpg"))); // NOI18N
+        bronzLadaBtn.setText("jButton1");
+        bronzLadaBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bronzLadaActionPerformed(evt);
+                bronzLadaBtnActionPerformed(evt);
             }
         });
 
-        jLabel1.setText(aranyLada.getName());
+        jLabel1.setText(aranyLadaBtn.getName());
 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Ezüst láda");
@@ -77,14 +92,14 @@ public class KincskeresesGUI extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Bronz láda");
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Én rejtem a kincset!");
+        aranyLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        aranyLabel.setText("Én rejtem a kincset!");
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Nem én rejtem a kincset!");
+        ezustLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ezustLabel.setText("Nem én rejtem a kincset!");
 
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("Az arany hazudik!");
+        bronzLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bronzLabel.setText("Az arany hazudik!");
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("Arany láda");
@@ -98,8 +113,8 @@ public class KincskeresesGUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(aranyLada, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(aranyLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(aranyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(114, 114, 114)
@@ -107,8 +122,8 @@ public class KincskeresesGUI extends javax.swing.JFrame {
                 .addGap(45, 45, 45)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ezustLada, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ezustLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ezustLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(222, 222, 222)
@@ -119,8 +134,8 @@ public class KincskeresesGUI extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bronzLada, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bronzLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bronzLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -139,9 +154,9 @@ public class KincskeresesGUI extends javax.swing.JFrame {
                             .addComponent(jLabel11))
                         .addGap(18, 18, 18)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(aranyLada, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ezustLada, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bronzLada, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(aranyLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ezustLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bronzLadaBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(7, 7, 7)
@@ -149,12 +164,12 @@ public class KincskeresesGUI extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabel5)
                                 .addComponent(jLabel7))
-                            .addComponent(jLabel4)))
+                            .addComponent(aranyLabel)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8))))
+                            .addComponent(ezustLabel)
+                            .addComponent(bronzLabel))))
                 .addGap(48, 48, 48))
         );
 
@@ -206,12 +221,12 @@ public class KincskeresesGUI extends javax.swing.JFrame {
 
     private void UjJatekActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UjJatekActionPerformed
         if (evt.getSource()==UjJatek) {
-            aranyLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/aranylada.jpg")));
-            ezustLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/ezustlada.jpg")));
-            bronzLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/bronz.jpg")));
-            jLabel4.setText("Én rejtem a kincset!");
-            jLabel6.setText("Nem én rejtem a kincset!");
-            jLabel8.setText("Az arany hazudik!");
+            aranyLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/aranylada.jpg")));
+            ezustLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/ezustlada.jpg")));
+            bronzLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/bronz.jpg")));
+            aranyLabel.setText("Én rejtem a kincset!");
+            ezustLabel.setText("Nem én rejtem a kincset!");
+            bronzLabel.setText("Az arany hazudik!");
 
         }
         
@@ -219,20 +234,20 @@ public class KincskeresesGUI extends javax.swing.JFrame {
         
     }//GEN-LAST:event_UjJatekActionPerformed
 
-    private void bronzLadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bronzLadaActionPerformed
-        bronzLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/unlike.jpg")));
-        jLabel8.setText("Nincs meg a kincs, keress tovább!");
-    }//GEN-LAST:event_bronzLadaActionPerformed
+    private void bronzLadaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bronzLadaBtnActionPerformed
+        bronzLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/unlike.jpg")));
+        bronzLabel.setText("Nincs meg a kincs, keress tovább!");
+    }//GEN-LAST:event_bronzLadaBtnActionPerformed
 
-    private void ezustLadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ezustLadaActionPerformed
-        ezustLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/kincs.jpg")));
-        jLabel6.setText("Talált! Megvan a kincs!");
-    }//GEN-LAST:event_ezustLadaActionPerformed
+    private void ezustLadaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ezustLadaBtnActionPerformed
+        ezustLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/kincs.jpg")));
+        ezustLabel.setText("Talált! Megvan a kincs!");
+    }//GEN-LAST:event_ezustLadaBtnActionPerformed
 
-    private void aranyLadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aranyLadaActionPerformed
-        aranyLada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/unlike.jpg")));
-        jLabel4.setText("Nincs meg a kincs, keress tovább!");
-    }//GEN-LAST:event_aranyLadaActionPerformed
+    private void aranyLadaBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aranyLadaBtnActionPerformed
+        aranyLadaBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nezet_kepek/unlike.jpg")));
+        aranyLabel.setText("Nincs meg a kincs, keress tovább!");
+    }//GEN-LAST:event_aranyLadaBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -272,19 +287,19 @@ public class KincskeresesGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton UjJatek;
-    private javax.swing.JButton aranyLada;
-    private javax.swing.JButton bronzLada;
-    private javax.swing.JButton ezustLada;
+    private javax.swing.JLabel aranyLabel;
+    private javax.swing.JButton aranyLadaBtn;
+    private javax.swing.JLabel bronzLabel;
+    private javax.swing.JButton bronzLadaBtn;
+    private javax.swing.JLabel ezustLabel;
+    private javax.swing.JButton ezustLadaBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

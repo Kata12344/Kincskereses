@@ -105,8 +105,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="aranyLada" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
+                              <Component id="aranyLadaBtn" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
+                              <Component id="aranyLabel" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
                               <Component id="jLabel11" alignment="0" min="-2" pref="194" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -118,8 +118,8 @@
                   <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jLabel2" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" pref="194" max="-2" attributes="0"/>
-                      <Component id="ezustLada" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="ezustLabel" min="-2" pref="194" max="-2" attributes="0"/>
+                      <Component id="ezustLadaBtn" min="-2" pref="194" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -132,8 +132,8 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="bronzLada" min="-2" pref="193" max="-2" attributes="0"/>
-                              <Component id="jLabel8" min="-2" pref="192" max="-2" attributes="0"/>
+                              <Component id="bronzLadaBtn" min="-2" pref="193" max="-2" attributes="0"/>
+                              <Component id="bronzLabel" min="-2" pref="192" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="0" min="-2" pref="193" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="32767" attributes="0"/>
@@ -161,9 +161,9 @@
                       </Group>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="aranyLada" alignment="3" min="-2" pref="165" max="-2" attributes="0"/>
-                      <Component id="ezustLada" alignment="3" min="-2" pref="164" max="-2" attributes="0"/>
-                      <Component id="bronzLada" alignment="3" min="-2" pref="165" max="-2" attributes="0"/>
+                      <Component id="aranyLadaBtn" alignment="3" min="-2" pref="165" max="-2" attributes="0"/>
+                      <Component id="ezustLadaBtn" alignment="3" min="-2" pref="164" max="-2" attributes="0"/>
+                      <Component id="bronzLadaBtn" alignment="3" min="-2" pref="165" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -173,14 +173,14 @@
                                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Component id="aranyLabel" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="ezustLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="bronzLabel" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -190,7 +190,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="aranyLada">
+        <Component class="javax.swing.JButton" name="aranyLadaBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/nezet_kepek/aranylada.jpg"/>
@@ -198,10 +198,10 @@
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aranyLadaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aranyLadaBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="ezustLada">
+        <Component class="javax.swing.JButton" name="ezustLadaBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/nezet_kepek/ezustlada.jpg"/>
@@ -209,10 +209,10 @@
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ezustLadaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ezustLadaBtnActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="bronzLada">
+        <Component class="javax.swing.JButton" name="bronzLadaBtn">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/nezet_kepek/bronz.jpg"/>
@@ -220,13 +220,13 @@
             <Property name="text" type="java.lang.String" value="jButton1"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bronzLadaActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bronzLadaBtnActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel1">
           <Properties>
             <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="aranyLada" name="getName" type="method"/>
+              <Connection component="aranyLadaBtn" name="getName" type="method"/>
             </Property>
           </Properties>
         </Component>
@@ -245,7 +245,7 @@
             <Property name="text" type="java.lang.String" value="Bronz l&#xe1;da"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="aranyLabel">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="&#xc9;n rejtem a kincset!"/>
@@ -253,7 +253,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="ezustLabel">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Nem &#xe9;n rejtem a kincset!"/>
@@ -261,7 +261,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="bronzLabel">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="text" type="java.lang.String" value="Az arany hazudik!"/>
